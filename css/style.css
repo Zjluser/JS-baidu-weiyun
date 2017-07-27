@@ -1,0 +1,748 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration:none;
+}
+.bg{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:url(../img/bg.jpg) no-repeat ;
+    background-size:cover;
+}
+/*头部*/
+.header{
+    width:100%;
+    min-width:1000px;
+    height:62px;
+    position:relative;
+}
+.header .logo{
+    float:left;
+    width:142px;
+    height:32px;
+    margin:16px 0 0 14px;
+    background:url(../img/logo.png) no-repeat center center;
+}
+.header .function{
+    width:20%;
+    min-width:260px;
+    height:100%;
+    display:inline-block;
+}
+.header .function li{
+    width:20%;
+    height:50%;
+    color:#fff;
+    font-size:16px;
+    text-align:center;
+    display:inline-block;
+    padding:14px 0 0 30px;
+    cursor:pointer;
+    position:relative;
+}
+.header .function li.active:after{
+    content:'';
+    position:absolute;
+    left:calc(50% - 3px);
+    bottom:-8px;
+    width:36px;
+    height:4px;
+    background:#fff;
+    border-radius:10px;
+}
+.header .function li:hover{
+   color:rgba(225,225,225,0.8);
+}
+/*提示框*/
+.header .tip{
+    padding:15px 24px;
+    position:absolute;
+    left:50%;
+    top:-70px;
+    border-radius:50px;
+    text-align:center;
+    font-size:18px;
+    color:#fff;
+    transition:top 450ms linear;
+}
+.header .tip.succ{
+    top:14px;
+    background:#86ce8b;
+}
+.header .tip.fail{
+    top:14px;
+    background:#ef8989;
+}
+.header .info{
+    float:right;
+    width:650px;
+    height:100%;
+    display:flex;
+    /*justify-content:center;*/
+    align-items:center;
+    /*background:red;*/
+}
+.header .info .vip{
+    color:red;
+    padding-right:10px;
+}
+.userImg{
+    width:45px;
+    height:42px;
+    background:url(../img/touxiang.png) no-repeat;
+}
+.header .info .username{
+    padding-left:10px;
+}
+.header .info .user{
+    color:black;
+    padding-left:80px;
+}
+.header .info .user:hover{
+    color:blue;
+}
+.header .info .customer{
+    width:20%;
+    height:50%;
+    position:relative;
+    background:url(../img/img.png) no-repeat center center;
+}
+.header .info .vipBtn{
+    width:90px;
+    height:30px;
+    background:#f8645c;
+    margin-left:50px;
+    text-align:center;
+    line-height:30px;
+    color:white;
+    border-radius:8px;
+    border:none;
+}
+
+/*主体内容*/
+.main{
+    height:90%;
+    min-height:500px;
+    width:100%;
+    min-width:1000px;
+}
+.main .left,.main .right{
+    float:left;
+}
+.main .left{
+    width:12%;
+    height:100%;
+}
+.main .right{
+    width:87%;
+    height:100%;
+    border-radius:10px;
+    background:#fff;
+}
+/*左菜单栏*/
+.main .left .menu{
+    margin-top:20px;
+}
+.main .left .menu li{
+    width:100%;
+    height:50px;
+    text-align:left;
+    text-indent:50px;
+    font-size:14px;
+    line-height:40px;
+    color:#fff;
+}
+.main .left .menu li:hover{
+    background-color:#c4f3db;
+}
+.main .left .menu li.files{
+    position:relative;
+}
+.main .left .menu li.files:before{
+    content:'';
+    position:absolute;
+    width:18px;
+    height:18px;
+    top:12px;
+    left:20px;
+    background:url(../img/allfiles.png) no-repeat center center;
+}
+.main .left .menu li.myshare{
+    position:relative;
+}
+.main .left .menu li.myshare:before{
+    content:'';
+    position:absolute;
+    width:18px;
+    height:18px;
+    top:12px;
+    left:20px;
+    background:url(../img/share.png) no-repeat center center;
+
+}
+.main .left .menu li.recycled{
+    position:relative;
+}
+.main .left .menu li.recycled:before{
+    content:'';
+    position:absolute;
+    width:18px;
+    height:18px;
+    top:12px;
+    left:20px;
+    background:url(../img/del.png) no-repeat center center;
+}
+/*右内容栏*/
+.main .right .top{
+    width:100%;
+    height:60px;
+}
+.main .right .topleft{
+    width:900px;
+    height:100%;
+    float:left;
+    margin-left:10px;
+}
+.upload,.newfile,.download,.mydevice,.file-operate{
+    height:35px;
+    margin:16px 5px 0 0;
+    color:#72acff;
+    border:1px solid #3b8cff;
+    display:inline-block;
+    font-size:16px;
+    line-height:35px;
+    border-radius:5px;
+    cursor:pointer;
+}
+.main .right .top .topleft li:hover{
+   color:#cfddf9;
+}
+.main .right .top .topleft .upload{
+    width:80px;
+    text-indent:32px;
+    background:#fff url(../img/upload.png) no-repeat 12px center;
+    color:#72acff;
+    position:relative;
+}
+.main .right .top .topleft .upload:hover{
+    border-radius:5px 5px 0 0;
+}
+.main .right .top .topleft .upload:hover .upload-hover{
+    display:block;
+}
+.main .right .top .topleft .upload-hover{
+    display:none;
+    position:absolute;
+    top:36px;
+    left:-1px;
+    border:1px solid #3b8cff;
+    border-top:none;
+    border-radius:0 0 5px 5px;
+}
+.main .right .top .topleft .upload-hover li{
+    width:80px;
+    font-size:14px;
+    height:36px;
+    text-indent:0;
+    line-height:36px;
+    text-align:center;
+    border-radius:0;
+    color:#72acff;
+    cursor:pointer;
+    border:none;
+    background:#fff;
+}
+.main .right .top .topleft .upload-hover li:hover{
+    background:#e3e8eb;
+}
+.main .right .top .topleft .upload-hover li:nth-of-type(2){
+    border-radius:0 0 5px 5px;
+}
+
+.main .right .top .topleft .upload.active{
+    background: url(../img/uploadactive.png) no-repeat 12px center #3b8cff;
+    color:#fff;
+}
+.main .right .top .topleft .newfile{
+    width:125px;
+    text-indent:32px;
+    background:url(../img/newfile.png) no-repeat 10px center;
+}
+.main .right .top .topleft .newfile:hover{
+    background:url(../img/newfilehover.png) no-repeat 10px center;
+}
+.main .right .top .topleft .file-operate.active{
+   display:none;
+}
+.main .right .top .topleft .file-operate>li{
+    padding:0 10px;
+    display:inline-block;
+}
+.main .right .top .topleft .file-operate>li+li{
+    border-left:1px solid rgb(65, 127, 246);
+}
+.file-operate .share-file{
+  background:url(../img/share-file.png) no-repeat 7px center;
+  text-indent:25px;
+}
+.file-operate .share-file:hover{
+    background:url(../img/sharehover.png) no-repeat 7px center;
+}
+.file-operate .download-file{
+  background:url(../img/download.png) no-repeat 7px center;
+  text-indent:25px;
+}
+.file-operate .download-file:hover{
+  background:url(../img/downloadhover.png) no-repeat 7px center;
+}
+.file-operate .delete-file{
+  background:url(../img/delete.png) no-repeat 7px center;
+  text-indent:25px;
+}
+.file-operate .delete-file:hover{
+  background:url(../img/deletehover.png) no-repeat 7px center;
+}
+
+.main .right .top .topleft .download{
+    width:110px;
+    text-indent:32px;
+    background:url(../img/download.png) no-repeat 10px center;
+}
+.main .right .top .topleft .download.active{
+    display:none;
+}
+.main .right .top .topleft .download:hover{
+    background:url(../img/downloadhover.png) no-repeat 10px center;
+}
+.main .right .top .topleft .mydevice{
+    width:110px;
+    text-indent:32px;
+    background:url(../img/mydevice.png) no-repeat 10px center;
+    position:relative;
+}
+.main .right .top .topleft .mydevice.active{
+    display:none;
+}
+.main .right .top .topleft .mydevice:hover{
+    background:url(../img/mydevicehover.png) no-repeat 10px center;
+    border-radius:5px 5px 0 0;
+    border-bottom:none;
+}
+.main .right .top .topleft .mydevice:hover .mydevice-hover{
+    display:block;
+}
+.main .right .top .topleft .mydevice .mydevice-hover{
+    position:absolute;
+    left:-1px;
+    top:35px;
+    display:none;
+    border:1px solid #3b8cff;
+    border-radius:0 0 5px 5px;
+}
+.main .right .top .topleft .mydevice .mydevice-hover li{
+    width:110px;
+    text-indent:0;
+    height:36px;
+    line-height:36px;
+    text-align:center;
+    color:#72acff;
+}
+.main .right .top .topleft .mydevice .mydevice-hover li:nth-of-type(2){
+    border-radius:0 0 5px 5px;
+}
+.main .right .top .topleft .mydevice .mydevice-hover li:hover{
+    background:#e3e8eb;
+}
+
+.main .right .top .topright{
+    float:right;
+    width:350px;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+}
+.main .right .top .topright .search{
+    width:250px;
+    height:48%;
+    background:rgb(238, 238, 238);
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+}
+.main .right .top .topright .search .searchbtn{
+    width:30px;
+    height:100%;
+    background:url(../img/search.png) no-repeat center
+    center;
+    cursor:pointer;
+}
+.main .right .top .topright .search .text{
+    background:rgb(238, 238, 238);
+    outline:none;
+    border:none;
+    margin-left:10px;
+    width:84%;
+    height:100%;
+}
+.main .right .top .topright .order{
+    height:40%;
+    width:10%;
+    background:url(../img/order.png) no-repeat center center;
+}
+.main .right .top .topright .viewselect{
+    width:10%;
+    height:40%;
+    background:url(../img/view.png) no-repeat center center;
+}
+
+/*统计*/
+.dis-menu{
+    width:100%;
+    height:6%;
+    font-size:15px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;/*布局：让中间有空格*/
+}
+.dis-menu .left-dis{
+    margin-left:18px;
+}
+.dis-menu .right-dis{
+    margin-right:60px;
+}
+
+.nav{
+    width:100%;
+    height:4%;
+    border-bottom:1px solid #f1f2f4;
+}
+.nav .select-all{
+    height:100%;
+    margin-left:18px;
+    font-size:16px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;/*从左侧开始*/
+}
+.nav .select-all .checkbox{
+   width:14px;
+   height:14px;
+   background:url(../img/checkbox.png) no-repeat 0 0;
+   margin-right:5px;
+}
+.nav .select-all .checkbox.active{
+    background:url(../img/checkbox.png) no-repeat right 0;
+}
+.nav .select-all .file-navs-list{
+    margin-left:30px;
+    display:inline-block;
+    color:#000;
+}
+.nav .select-all .file-navs-list .return {
+    margin-right:6px;
+    color:#000;
+}
+.nav .select-all .file-navs-list .demo{
+    padding:0 5px 3px 5px;
+    color:#000;
+}
+.nav .select-all .file-navs-list .demo.active{
+    border-bottom:2px solid #3b8cff;
+    color:#3b8cff;
+}
+
+/*文件夹的主体内容*/
+.right .body{
+    width:100%;
+    height:73%;
+    position:relative;
+    overflow-y:auto;
+}
+.right .body .file-box{
+    width:130px;
+    height:130px;
+    border-radius:8px;
+    margin:5px;
+    display:inline-block;
+    position:relative;
+}
+.right .body .file-box:hover{
+    background:#cfddee;
+}
+.right .body .file-box:hover .circle{
+    display:block;
+}
+/*当点击的时候*/
+.right .body .file-box.active{
+    background:#cfddee;
+}
+.right .body .file-box .fileImg{
+    width:60px;
+    height:60px;
+    position:absolute;
+    top:calc(50% - 40px);
+    left:calc(50% - 30px);
+    background:url(../img/file.png) no-repeat center center;
+    background-size:cover;
+}
+.right .body .file-box .file-name{
+    width:80%;
+    max-width:80%;
+    margin-left:10px;
+    height:20%;
+    position:absolute;
+    top:70%;
+    left:0;
+    text-align:center;
+}
+.right .body .file-box .file-name.active{
+    display:none;
+}
+.right .body .file-box .text-file{
+    width:110%;
+    height:20%;
+    position:absolute;
+    top:70%;
+    left:-2%;
+    display:flex;
+    display:none;
+    text-align:center;
+    align-items:center;
+    justify-content:space-between;
+}
+.right .body .file-box .text-file.active{
+    display:flex;
+}
+.right .body .file-box .text-file .rename-text{
+    width:60%;
+    height:80%;
+    font-size:13px;
+    border:1px solid #3b8cff;
+    border-radius:5px;
+    outline:none;
+    padding-left:5px;
+}
+.right .body .file-box .text-file a{
+    width:15%;
+    height:70%;
+    border:1px solid #3b8cff;
+    border-radius:5px;
+    display:flex;
+    align-items:center;
+    font-weight:700;
+    justify-content:space-around;
+}
+.right .body .file-box .text-file a:hover{
+    background:#3b8cff;
+    color:#fff;
+}
+.right .body .file-box .circle{
+    width:20px;
+    height:20px;
+    border-radius:5px;
+    background:#3b8cff;
+    position:absolute;
+    top:5px;
+    left:5px; 
+    line-height:20px;
+    text-align:center;
+    color:rgba(255, 255, 255, 0.5);
+    cursor:pointer;
+    display:none;
+}
+.right .body .file-box .circle.active{
+    color:#fff;
+    background:rgba(65, 127, 246, 1);
+    display:block;
+}
+/*
+遮罩层：
+*/
+.move-list-wrap{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:999;
+  background:rgba(0,0,0,0.1);
+  transform:scale(0);
+  overflow:hidden;
+}
+.move-list-wrap.active{
+  transform:scale(1);
+  transition:200ms linear;
+}
+.move-list-panel{
+    width:410px;
+    height:420px;
+    box-sizing:border-box;
+    border:1px solid #55addc;
+    border-radius:10px;
+    background-color:#fff;
+    position:absolute;
+    left:calc(50% - 205px);
+    top:calc(50% - 205px);
+    display:flex;
+    /*纵向排列*/
+    flex-direction:column;
+}
+.move-list-header{
+    width:100%;
+    height:50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-sizing:border-box;
+    padding:0 20px;
+    border-bottom:1px solid #55addc;
+    cursor:move;
+}
+.move-list-header h3{
+   font-size:16px;
+}
+.move-list-header span{
+    width:20px;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    font-size:20px;
+}
+.move-list-menu-wrap{
+    width:100%;
+    height:300px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.move-list-menu{
+    width:358px;
+    height:240px;
+    overflow:auto;
+    white-space:nowrap;
+    padding:18px 10px;
+    /*宽度和高度的取值中包含边框的的宽度*/
+    box-sizing:border-box;
+}
+.move-list-menu ul{
+    min-width:260px;
+    box-sizing:border-box;
+}
+.move-list-menu ul li{
+    cursor:pointer;
+    margin:2px 0;
+}
+.move-list-menu ul h2{
+    float:left;
+    height:20px;
+    font:16px/20px arial;
+    padding:4px 5px;
+    display:flex;
+    align-items:center;
+    border:2px solid rgba(0,0,0,0);
+}
+.move-list-menu ul h2.active{
+    border:2px solid rgba(130, 189, 227, 0.8);
+    background-color: rgba(130, 189, 227, 0.4);
+}
+.move-list-menu ul h2.checked{
+  border: 2px solid rgba(73, 212, 133, 0.8);
+  background-color: rgba(73, 212, 133, 0.4);
+}
+.move-list-menu ul h2:hover {
+  border: 2px solid rgba(130, 189, 227, 0.8);
+  background-color: rgba(130, 189, 227, 0.4);
+}
+.move-list-menu ul ul{
+    float:left;
+    margin-left:20px;
+    display:-none;
+}
+.move-list-menu ul ul.active{
+    display:block;
+}
+.move-list-menu ul h2 div.add{
+    width:50px;
+    height:20px;
+    background:url(../img/icon-tree.png) no-repeat 0 0;
+}
+.move-list-menu ul h2 div.active{
+    background:url(../img/icon-tree.png) no-repeat 0 -23px;
+}
+.move-list-btns{
+    display:flex;
+    flex:1;
+    justify-content:center;
+    align-items:center;
+}
+.move-list-btns button{
+    width:80px;
+    height:30px;
+    border-radius:4px;
+    border:1px solid #55addc;
+    display:flex;
+    background-color:#fff;
+    justify-content:center;
+    align-items:center;
+    color:#55addc;
+    outline:none;
+}
+.move-list-btns button:hover{
+    background-color:#55addc;
+    color:#fff;
+}
+.move-list-btns button.sureMove{
+    margin-right:12px;
+}
+.move-list-btns button.cancelMove{
+    margin-right:12px;
+}
+/*鼠标画框*/
+.body .frame{
+    position:absolute;
+    width:0;
+    height:0;
+    left:-9999px;
+    background:rgba(120,205,228,0.6);
+}
+
+/*鼠标右键列表*/
+  .fileRightMenu{
+    position:absolute;
+    border:1px solid #dde0e4;
+    border-radius:5px;
+    box-shadow:0 0 8px #ccc;
+    background-color:#fff;
+  }
+  .fileRightMenu a{
+    display:block;
+    cursor:default;
+    height:30px;
+    line-height:30px;
+    white-space:nowrap;
+    padding:0 50px 0 50px;
+    color:#000;
+    font-size:16px;
+    text-align:center;
+  }
+  .fileRightMenu a:hover{
+    background-color:#55addc;
+    color:#fff;
+  }
+  .fileRightMenu a.botbor{
+    padding:0;
+    margin:5px 0;
+    height:1px;
+    line-height:0;
+    font-size:0!important;
+    background-color:#e9e9e9;
+    cursor:default;
+  }
